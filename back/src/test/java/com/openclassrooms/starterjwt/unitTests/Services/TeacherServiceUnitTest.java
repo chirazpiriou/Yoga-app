@@ -31,13 +31,13 @@ import com.openclassrooms.starterjwt.services.UserService;
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)  // Active Mockito for this test
 public class TeacherServiceUnitTest {
-	@Mock // Create a UserRepository mock
+	@Mock // Create a TeacherRepository mock
     private TeacherRepository teacherRepository;
 	
-	@InjectMocks // Mockito here injects the mock into UserService
+	@InjectMocks // Mockito here injects the mock into TeacherService
     private TeacherService teacherService;
 	
-	@BeforeEach // This method is executed before each test to initialize the UserService with a mocked UserRepository
+	@BeforeEach // This method is executed before each test to initialize the TeacherService with a mocked TeacherRepository
 	public void initialize() {
 		teacherService = new TeacherService(teacherRepository);
 	}
