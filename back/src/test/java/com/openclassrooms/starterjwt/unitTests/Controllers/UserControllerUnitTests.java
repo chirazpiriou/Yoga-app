@@ -170,10 +170,6 @@ public class UserControllerUnitTests {
 	
 	
 	
-	
-	
-	
-	
 	@Test 
     @Tag("testDeleteUserById-api-user-id") // Allows you to group or filter tests by specific labels.
     @DisplayName("/api/user/{id} -> Delete user by ID return HttpStatus.NOT_FOUND when User does not exists") // Displays a more readable and descriptive name for each test, making them easier to understand.
