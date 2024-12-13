@@ -314,6 +314,8 @@ public class SessionServiceUnitTest {
 		assertThrows(com.openclassrooms.starterjwt.exception.BadRequestException.class, () ->  sessionService.noLongerParticipate(session.getId(), user.getId()));
 		
     } 
+	
+
 
 
 
