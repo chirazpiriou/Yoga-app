@@ -73,7 +73,7 @@ public class UserControllerIntegrationTests {
     @BeforeEach
     void setUp() {
        
-        //Test user creation
+    
         user = new User();
         user.setId(1L);
         user.setEmail("alice@gmail.com");
