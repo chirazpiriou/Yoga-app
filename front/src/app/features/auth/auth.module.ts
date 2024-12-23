@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 const materialModules = [
   MatButtonModule,
@@ -30,6 +31,7 @@ const materialModules = [
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule ,
     ...materialModules
   ]
 })

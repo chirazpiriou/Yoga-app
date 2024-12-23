@@ -15,6 +15,8 @@ import { Session } from '../../interfaces/session.interface';
 import { Teacher } from '../../../../interfaces/teacher.interface';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -81,7 +83,9 @@ describe('DetailComponent', () => {
         RouterTestingModule,
         HttpClientModule,
         MatSnackBarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatIconModule,
+        MatCardModule 
       ],
       declarations: [DetailComponent], 
       providers: [

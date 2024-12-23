@@ -7,7 +7,7 @@ import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
 import { Session } from '../../interfaces/session.interface';
 import { SessionInformation } from '../../../../interfaces/sessionInformation.interface';
-
+import { RouterModule } from '@angular/router';
 
 import { ListComponent } from './list.component';
 import { of } from 'rxjs';
@@ -54,7 +54,7 @@ describe('ListComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [ListComponent],
-      imports: [HttpClientModule, MatCardModule, MatIconModule],
+      imports: [HttpClientModule, MatCardModule, MatIconModule,  RouterModule.forRoot([])],
       providers: [
         { provide: SessionService, useValue: mockSessionService },
         { provide: SessionApiService, useValue: mockSessionApiService },
