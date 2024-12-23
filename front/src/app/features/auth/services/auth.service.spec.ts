@@ -5,7 +5,14 @@ import { LoginRequest } from '../interfaces/loginRequest.interface';
 import { RegisterRequest } from '../interfaces/registerRequest.interface';
 import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
-
+/**------> unit test------
+ * This test suite is a unit test for the AuthService.
+ * It verifies that the `register` and `login` methods send the correct HTTP requests
+ * and handle the responses appropriately.
+ * 
+ * The HttpTestingController is used to simulate API calls, ensuring the service
+ * is tested in isolation without a real backend.
+ */
 
 describe('AuthService', () => {
     let authService: AuthService;

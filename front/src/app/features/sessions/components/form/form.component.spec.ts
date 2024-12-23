@@ -21,6 +21,18 @@ import { Session } from '../../interfaces/session.interface';
 import { of } from 'rxjs';
 import { Teacher } from 'src/app/interfaces/teacher.interface';
 
+/**------> integration test------
+ * This test suite is an integration test for the FormComponent.
+ * It verifies the component's interactions with its dependencies,
+ * such as SessionApiService, TeacherService, MatSnackBar, and Router,
+ * as well as its handling of Angular forms and navigation.
+ * 
+ * Mocked services are used to simulate backend behavior, while
+ * the test ensures that the component works correctly in a
+ * realistic Angular environment with form validation and UI interactions.
+ */
+
+
 describe('FormComponent', () => {
 
   const mockSessionInformation: SessionInformation = { 

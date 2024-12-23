@@ -12,6 +12,16 @@ import { RouterModule } from '@angular/router';
 import { ListComponent } from './list.component';
 import { of } from 'rxjs';
 
+/**------> unit test------
+ * This test suite is a unit test for the ListComponent.
+ * It focuses on verifying the isolated behavior of the component,
+ * including its initialization logic, getters, and observable data streams.
+ * 
+ * The services SessionApiService and SessionService are mocked to simulate
+ * backend interactions, ensuring the component's functionality is tested
+ * without relying on external systems.
+ */
+
 describe('ListComponent', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;

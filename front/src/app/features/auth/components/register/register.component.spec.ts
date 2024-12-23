@@ -13,6 +13,15 @@ import { of, throwError } from 'rxjs';
 import { RegisterComponent } from './register.component';
 import { AuthService } from '../../services/auth.service';
 
+/**------> unit test------
+ * This test suite is a unit test for the RegisterComponent.
+ * It verifies the component's behaviors, such as form submission,
+ * service calls (AuthService.register), navigation (Router.navigate),
+ * and error handling (onError property).
+ * 
+ * External dependencies like AuthService and Router are mocked to ensure isolation.
+ */
+
 describe('RegisterComponent', () => {
   let registerComponent: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;

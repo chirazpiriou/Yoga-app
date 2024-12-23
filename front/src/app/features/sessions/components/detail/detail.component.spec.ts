@@ -19,6 +19,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
 
+/**------> integration test------
+ * This test suite is an integration test for the DetailComponent.
+ * It verifies the interactions between the component and its dependencies,
+ * such as services (SessionApiService, TeacherService), routing (Router),
+ * and UI elements (MatSnackBar).
+ * 
+ * Mocked dependencies are used to simulate real-world behavior,
+ * and the goal is to ensure the component functions correctly
+ * in a realistic Angular environment.
+ */
+
 
 describe('DetailComponent', () => {
   let detailComponent: DetailComponent;

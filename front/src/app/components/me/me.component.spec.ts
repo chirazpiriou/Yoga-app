@@ -14,6 +14,15 @@ import { UserService } from 'src/app/services/user.service';
 import { SessionInformation } from '../../interfaces/sessionInformation.interface';
 import { of } from 'rxjs';
 
+/**------> unit test------
+ * This test suite is a unit test for the MeComponent.
+ * It ensures the component behaves as expected by:
+ * - Mocking external services (UserService, SessionService, Router, MatSnackBar).
+ * - Verifying specific behaviors, such as user retrieval, account deletion, and navigation.
+ * 
+ * External interactions (API calls, routing, etc.) are replaced with mocks to maintain isolation.
+ */
+
 describe('MeComponent', () => {
   let meComponent: MeComponent;
   let fixture: ComponentFixture<MeComponent>;

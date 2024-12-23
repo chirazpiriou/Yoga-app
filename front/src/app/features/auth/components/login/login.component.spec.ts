@@ -16,6 +16,14 @@ import { of, throwError } from 'rxjs';
 import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
 
+/**------> unit test------
+ * This test suite is a unit test for the LoginComponent.
+ * It focuses on verifying the internal behaviors of the component,
+ * such as form submission, service calls, navigation, and error handling.
+ * 
+ * All external dependencies (SessionService, AuthService, Router) are mocked,
+ * ensuring the component is tested in isolation.
+ */
 
 
 describe('LoginComponent', () => {

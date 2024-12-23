@@ -6,6 +6,15 @@ import { HttpClientTestingModule,HttpTestingController,} from '@angular/common/h
 
 import { SessionApiService } from './session-api.service';
 
+
+/**------> unit test------
+ * This test suite is a unit test for the SessionApiService.
+ * It ensures that all methods in the service (e.g., all, detail, create, update, delete)
+ * perform the correct HTTP requests and return the expected responses.
+ * 
+ * The HttpTestingController is used to mock HTTP interactions, simulating API calls
+ * without connecting to a real backend.
+ */
 describe('SessionsService', () => {
   let sessionService: SessionApiService;
   let httpMock: HttpTestingController;
