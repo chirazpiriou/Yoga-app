@@ -6,6 +6,7 @@ import { RegisterRequest } from '../interfaces/registerRequest.interface';
 import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
 
+
 describe('AuthService', () => {
     let authService: AuthService;
     let httpMock: HttpTestingController;
