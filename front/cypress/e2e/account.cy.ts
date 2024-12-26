@@ -1,4 +1,16 @@
 describe('account-me not admin  spec', () => {
+  const USER_DETAILS = {
+    token: 'jwt',
+    type: 'Bearer',
+    id: 3,
+    email: 'aline@gmail.com',
+    lastName: 'aline',
+    firstName: 'dupuis',
+    admin: false,
+    createdAt: '2024-12-20T00:00:00',
+    updatedAt: '2024-12-26T00:00:00',
+  };
+
   it("should login it is essential to be able to see the conncected user's info ", () => {
     cy.visit('/login')
     cy.intercept('POST', '/api/auth/login', {
@@ -18,22 +30,13 @@ describe('account-me not admin  spec', () => {
 
   it('should show account user not admin information', () => {
 
-    cy.intercept('GET', '/api/user/3', {
-      body: [{
-              id: 3,
-              email: 'aline@gmail.com',
-              lastName: 'aline',
-              firstName: 'dupuis',
-              admin: false,
-              createdAt: '2024-12-20T00:00:00',
-              updatedAt: '2024-12-26T00:00:00',
-      }]
-    }).as('user1')
 
+    cy.intercept('GET', `/api/user/3`, (req) => {
+      req.reply(USER_DETAILS);
+    });
 
     cy.get('span[data-cy=goToAccount]').click()
     cy.url().should('include', '/me')
-    cy.wait('@user1');
     cy.get('button[data-cy=deleteMeButton]').should('exist')
   })
 
