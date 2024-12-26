@@ -1,7 +1,5 @@
 describe('Login spec', () => {
 
-
-
   it('should sucessfully let the user Login ', () => {
     cy.visit('/login')
 
