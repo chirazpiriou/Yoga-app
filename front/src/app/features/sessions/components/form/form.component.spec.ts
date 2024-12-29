@@ -169,7 +169,7 @@ describe('FormComponent', () => {
       // Simulate the URL containing `/update/2`
       // This indicates that a request to update an item with ID 1 is being made
 
-      // @ts-ignore --------------->is used here to ignore potential TypeScript errors
+      //@ts-ignore --------------->is used here to ignore potential TypeScript errors 
       mockRouter.url = '/update/2';
     
       // Spy on the `detail` method of the `mockSessionApiService` service
