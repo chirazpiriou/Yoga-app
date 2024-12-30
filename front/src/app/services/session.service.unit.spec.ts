@@ -5,7 +5,14 @@ import { SessionService } from './session.service';
 import { BehaviorSubject } from 'rxjs';
 import {  Observable } from 'rxjs';
 
-describe('SessionService', () => {
+/**------> unit test------
+ * Unit tests for the `SessionService` class to verify its internal logic.  
+ * Tests include initial state, `$isLogged` observable behavior, and `logIn`/`logOut` methods.  
+ * Mock session data is used to simulate user login scenarios.  
+ * Ensures the service behaves as expected before integration with other components.  
+ */
+
+describe('SessionService (unit test)', () => {
   let sessionService: SessionService;
 
   // Mock data conforming to the SessionInformation interface

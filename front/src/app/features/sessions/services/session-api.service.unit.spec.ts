@@ -15,7 +15,7 @@ import { SessionApiService } from './session-api.service';
  * The HttpTestingController is used to mock HTTP interactions, simulating API calls
  * without connecting to a real backend.
  */
-describe('SessionsService', () => {
+describe('SessionsService (unit test)', () => {
   let sessionService: SessionApiService;
   let httpMock: HttpTestingController;
   let pathService = 'api/session';

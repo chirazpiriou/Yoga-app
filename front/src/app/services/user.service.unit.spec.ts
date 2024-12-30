@@ -4,7 +4,14 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { UserService } from './user.service';
 import { User } from '../interfaces/user.interface';
 
-describe('UserService', () => {
+
+/**------> unit test------
+ * Unit tests for the `UserService` class, focusing on HTTP interactions.  
+ * Tests include fetching a user by ID (`getById`) and deleting a user by ID (`delete`).  
+ * Mock data is used to simulate API responses for user retrieval and deletion.  
+ * Ensures correct HTTP methods and paths are used, and responses are properly handled.  
+ */
+describe('UserService (unit test)', () => {
   let userService: UserService;
   let pathService = 'api/user';
   let httpMock: HttpTestingController; // Used to simulate HTTP requests

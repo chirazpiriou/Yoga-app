@@ -22,7 +22,7 @@ import { of } from 'rxjs';
  * without relying on external systems.
  */
 
-describe('ListComponent', () => {
+describe('ListComponent (unit test)', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;
 

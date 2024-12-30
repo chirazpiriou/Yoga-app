@@ -94,7 +94,7 @@ describe('LoginComponent', () => {
 
       loginComponent.submit();
 
-      expect(logInSpySessionService).toHaveBeenCalled;
+      expect(logInSpySessionService).toHaveBeenCalled();
  
     });
   
@@ -109,11 +109,11 @@ describe('LoginComponent', () => {
     it('should set onError to true on error during login', () => {
       const error = new Error();
 
-      const errorSpy = jest.spyOn(mockAuthService, 'login').mockReturnValueOnce(throwError(error));
+      const errorSpy = jest.spyOn(mockAuthService, 'login').mockReturnValueOnce(throwError(() => error));
 
       loginComponent.submit();
 
-      expect(errorSpy).toHaveBeenCalled;
+      expect(errorSpy).toHaveBeenCalled();
       expect(loginComponent.onError).toBeTruthy();
     });
 

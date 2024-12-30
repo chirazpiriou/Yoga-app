@@ -31,7 +31,7 @@ import { MatCardModule } from '@angular/material/card';
  */
 
 
-describe('DetailComponent', () => {
+describe('DetailComponent (integration test)', () => {
   let detailComponent: DetailComponent;
   let fixture: ComponentFixture<DetailComponent>; 
   

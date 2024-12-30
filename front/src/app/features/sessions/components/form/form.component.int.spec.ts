@@ -33,7 +33,7 @@ import { Teacher } from 'src/app/interfaces/teacher.interface';
  */
 
 
-describe('FormComponent', () => {
+describe('FormComponent (integration test)', () => {
 
   const mockSessionInformation: SessionInformation = { 
     token: '', 

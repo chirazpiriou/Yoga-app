@@ -14,7 +14,7 @@ import { SessionInformation } from 'src/app/interfaces/sessionInformation.interf
  * is tested in isolation without a real backend.
  */
 
-describe('AuthService', () => {
+describe('AuthService (unit test)', () => {
     let authService: AuthService;
     let httpMock: HttpTestingController;
     let pathService = 'api/auth';

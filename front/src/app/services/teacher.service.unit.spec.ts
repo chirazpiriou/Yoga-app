@@ -4,8 +4,13 @@ import { Teacher } from '../interfaces/teacher.interface';
 import { TeacherService } from './teacher.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-
-describe('TeacherService', () => {
+/**------> unit test------
+ * Unit tests for the `TeacherService` class to verify its interaction with HTTP endpoints.  
+ * Tests include retrieving all teachers (`all`) and fetching teacher details by ID (`detail`).  
+ * Mock data and HTTP responses are used to simulate API calls.  
+ * Ensures correct HTTP methods and paths are used, and responses are properly handled.  
+ */
+describe('TeacherService (unit test)', () => {
   let teacherService: TeacherService;
   let httpMock: HttpTestingController;
   let pathService = 'api/teacher';
