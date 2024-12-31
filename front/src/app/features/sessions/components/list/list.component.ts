@@ -4,7 +4,7 @@ import { SessionInformation } from '../../../../interfaces/sessionInformation.in
 import { SessionService } from '../../../../services/session.service';
 import { Session } from '../../interfaces/session.interface';
 import { SessionApiService } from '../../services/session-api.service';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

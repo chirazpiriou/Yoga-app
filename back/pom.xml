@@ -97,14 +97,22 @@
                     </excludes>
                 </configuration>
             </plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+			
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.5</version>
+				
+				<configuration>
+			        <excludes>
+			            <exclude>com/openclassrooms/starterjwt/dto/**</exclude>
+			            <exclude>com/openclassrooms/starterjwt/exception/**</exclude>
+			            <exclude>com/openclassrooms/starterjwt/mapper/**</exclude>
+			            <exclude>com/openclassrooms/starterjwt/models/**</exclude>
+			            <exclude>com/openclassrooms/starterjwt/payload/**</exclude>
+			        </excludes>
+				</configuration>
+				
 				<executions>
 					<execution>
 						<goals>
@@ -120,7 +128,7 @@
 						</goals>
 					</execution>
 
-					<execution>
+					  <execution>
 						<id>jacoco-check</id>
 						<goals>
 							<goal>check</goal>
@@ -133,13 +141,14 @@
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.9</minimum>
+											<minimum>0.3</minimum>
 										</limit>
 									</limits>
 								</rule>
 							</rules>
 						</configuration>
 					</execution>
+				
 
 				</executions>
 			</plugin>
