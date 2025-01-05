@@ -1,8 +1,9 @@
 package com.openclassrooms.starterjwt.integrationTests;
 
-import org.junit.jupiter.api.BeforeAll;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,11 +18,14 @@ import com.openclassrooms.starterjwt.security.jwt.JwtUtils;
 import com.openclassrooms.starterjwt.security.services.UserDetailsServiceImpl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import javax.transaction.Transactional;
+
 import org.springframework.http.HttpHeaders;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@Transactional
 @ActiveProfiles("test")
 public class UserControllerIntegrationTests {
   @Autowired
@@ -33,7 +37,7 @@ public class UserControllerIntegrationTests {
   @Autowired
   private JwtUtils jwtUtils;
 
-  @BeforeAll
+  @BeforeEach
   void setUp() throws Exception {
     UserDetails userDetails = userDetailsService.loadUserByUsername("yoga@studio.com");
     authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
